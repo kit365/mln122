@@ -101,7 +101,7 @@ const Lessons = () => {
             <div className="absolute top-0 left-0 text-[200px] text-surplus/10 font-bold leading-none">"</div>
             <div className="relative z-10">
               <p className="text-2xl md:text-3xl font-bold text-center mb-6 leading-relaxed">
-                <span className="text-surplus">Doanh nghiệp phát triển bạn</span>
+                <span className="text-surplus">Doanh nghiệp đầu tư vào bạn</span>
                 <br />
                 <span className="text-white">–</span>
                 <br />
