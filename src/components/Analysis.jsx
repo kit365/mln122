@@ -118,7 +118,7 @@ const Analysis = () => {
             <div>
               <h4 className="text-2xl font-bold mb-3 text-surplus">Nhận diện then chốt:</h4>
               <p className="text-lg text-gray-300 leading-relaxed">
-                Khi doanh nghiệp nói "phát triển bạn", họ đang <span className="text-labor font-bold">tăng năng suất của bạn</span> (v) 
+                Khi doanh nghiệp nói "đầu tư vào bạn", họ đang <span className="text-labor font-bold">tăng năng suất của bạn</span> (v) 
                 để <span className="text-surplus font-bold">tăng giá trị thặng dư</span> (m). 
                 Khi họ yêu cầu "commitment" và "passion", họ đang <span className="text-surplus font-bold">kéo dài thời gian bóc lột</span> mà 
                 không cần trả thêm tiền.

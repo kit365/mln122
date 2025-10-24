@@ -160,7 +160,7 @@ const PracticalExample = () => {
                 </li>
               </ul>
               <p className="text-lg text-surplus font-bold mt-4 italic">
-                "Doanh nghiệp phát triển bạn – để khai thác bạn hiệu quả hơn."
+                "Doanh nghiệp đầu tư vào bạn – để khai thác bạn hiệu quả hơn."
               </p>
             </div>
           </div>
