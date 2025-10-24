@@ -1,9 +1,13 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import GameModal from './GameModal';
 
 const Hero = () => {
   const scrollToContent = () => {
     document.getElementById('formula-section').scrollIntoView({ behavior: 'smooth' });
   };
+
+  const [isGameOpen, setIsGameOpen] = useState(false);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -56,6 +60,19 @@ const Hero = () => {
           Khám Phá Sự Thật
         </motion.button>
 
+        {/* Play Game Button */}
+        <motion.button
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => setIsGameOpen(true)}
+          className="ml-4 mt-4 px-8 py-3 bg-white/5 text-white text-lg font-semibold rounded-full border border-white/10 hover:bg-white/7 transition-colors duration-200"
+        >
+          Chơi thử
+        </motion.button>
+
         {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -72,6 +89,7 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
+      <GameModal isOpen={isGameOpen} onClose={() => setIsGameOpen(false)} />
     </section>
   );
 };

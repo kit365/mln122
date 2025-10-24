@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giá Trị Thặng Dư Ẩn - Game Kinh Tế</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="game-container">
+    <!-- Header -->
+    <header class="game-header">
+      <div class="header-content">
+        <h1><i class="fas fa-chart-line"></i> Giá Trị Thặng Dư Ẩn</h1>
+        <p class="subtitle">Đoán Ý Từ Khóa Kinh Tế</p>
+      </div>
+    </header>
+
+    <!-- Game Area -->
+    <main class="game-main">
+      <!-- Start Screen -->
+      <div id="start-screen" class="screen active">
+        <div class="welcome-card">
+          <div class="card-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h2>Chào mừng đến với game!</h2>
+          <p>Hãy đoán từ khóa kinh tế dựa trên mô tả được đưa ra</p>
+          <div class="game-rules">
+            <h3><i class="fas fa-info-circle"></i> Cách chơi:</h3>
+            <ul>
+              <li>Đọc mô tả được hiển thị</li>
+              <li>Nhập từ khóa kinh tế tương ứng</li>
+              <li>Nhận điểm khi đoán đúng</li>
+                        <li>Thử thách bản thân với 3 câu hỏi (ôn lại nội dung chính)</li>
+            </ul>
+          </div>
+          <button id="start-btn" class="btn btn-primary">
+            <i class="fas fa-play"></i> Bắt đầu chơi
+          </button>
+        </div>
+      </div>
+
+      <!-- Game Screen -->
+      <div id="game-screen" class="screen">
+        <div class="game-card">
+          <div class="question-header">
+            <div class="score-display">
+              <span class="score-label">Điểm:</span>
+              <span id="score">0</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="question-counter">
+              <span id="current-question">1</span> / <span id="total-questions">10</span>
+            </div>
+          </div>
+
+          <div class="question-content">
+            <div class="question-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h2 id="question-text">Mô tả sẽ hiển thị ở đây...</h2>
+          </div>
+
+          <div class="answer-section">
+            <div class="input-group">
+              <input type="text" id="answer-input" placeholder="Nhập từ khóa kinh tế của bạn..." autocomplete="off">
+              <button id="submit-btn" class="btn btn-submit">
+                <i class="fas fa-paper-plane"></i> Gửi
+              </button>
+            </div>
+            <div class="hint-section">
+              <button id="hint-btn" class="btn btn-hint">
+                <i class="fas fa-lightbulb"></i> Gợi ý
+              </button>
+              <button id="show-answer-btn" class="btn btn-show-answer">
+                <i class="fas fa-eye"></i> Hiện đáp án
+              </button>
+              <div id="hint-text" class="hint-text"></div>
+            </div>
+          </div>
+
+          <div class="feedback-section">
+            <div id="feedback" class="feedback"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Screen -->
+      <div id="result-screen" class="screen">
+        <div class="result-card">
+          <div class="result-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h2>Kết quả của bạn!</h2>
+          <div class="score-display-large">
+            <span class="score-number" id="final-score">0</span>
+            <span class="score-label">/</span>
+            <span class="detail-value" id="total-questions-result">3</span>
+          </div>
+          <div class="performance-message" id="performance-message">
+            Tuyệt vời!
+          </div>
+          <div class="result-details">
+            <div class="detail-item">
+              <span class="detail-label">Đúng:</span>
+              <span class="detail-value" id="correct-answers">0</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Sai:</span>
+              <span class="detail-value" id="wrong-answers">0</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Độ chính xác:</span>
+              <span class="detail-value" id="accuracy">0%</span>
+            </div>
+          </div>
+          <div class="result-actions">
+            <button id="play-again-btn" class="btn btn-primary">
+              <i class="fas fa-redo"></i> Chơi lại
+            </button>
+            <button id="show-answers-btn" class="btn btn-secondary">
+              <i class="fas fa-list"></i> Xem đáp án
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Answers Screen -->
+      <div id="answers-screen" class="screen">
+        <div class="answers-card">
+          <div class="answers-header">
+            <h2><i class="fas fa-list"></i> Tất cả đáp án</h2>
+            <button id="back-to-result-btn" class="btn btn-back">
+              <i class="fas fa-arrow-left"></i> Quay lại
+            </button>
+          </div>
+          <div class="answers-list" id="answers-list">
+            <!-- Answers will be populated here -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="game-footer">
+      <p>made by con mèo biết code</p>
+    </footer>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
