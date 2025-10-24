@@ -1,9 +1,23 @@
+import { useEffect } from 'react';
+
 const GameModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   const openStandalone = () => {
     window.open('/game.html', '_blank', 'noopener');
   };
+
+  useEffect(() => {
+    function onMessage(e) {
+      if (!e?.data) return;
+      if (e.data.type === 'closeGameModal') {
+        onClose();
+      }
+    }
+
+    window.addEventListener('message', onMessage);
+    return () => window.removeEventListener('message', onMessage);
+  }, [onClose]);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
@@ -29,7 +43,7 @@ const GameModal = ({ isOpen, onClose }) => {
         </div>
 
         <div className="w-full h-[640px] p-2">
-          <iframe src="/game.html" title="Quiz Game" className="w-full h-full rounded-xl border border-white/10" />
+          <iframe src="/game.html?embed=1" title="Quiz Game" className="w-full h-full rounded-xl border border-white/10" />
         </div>
       </div>
     </div>
