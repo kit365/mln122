@@ -1,6 +1,13 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 
+// Import images so Vite bundles them correctly for production
+import img_m5ph from '../asset/Gemini_Generated_Image_m5phxem5phxem5ph.png';
+import img_dn498 from '../asset/Gemini_Generated_Image_dn498ydn498ydn49.png';
+import img_unnamed from '../asset/unnamed.jpg';
+import img_sfp8 from '../asset/Gemini_Generated_Image_sfp8v1sfp8v1sfp8.png';
+import img_64xl from '../asset/Gemini_Generated_Image_64xlwn64xlwn64xl.png';
+
 const Timeline = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -20,7 +27,7 @@ const Timeline = () => {
         </ul>
         <p class="text-gray-300 italic">"Mình sẵn sàng học hỏi và cống hiến hết mình cho công ty!"</p>
       `,
-      imagePlaceholder: "/src/asset/Gemini_Generated_Image_m5phxem5phxem5ph.png",
+  imagePlaceholder: img_m5ph,
       icon: "🎓",
       color: "labor",
       status: "Bắt đầu",
@@ -44,7 +51,7 @@ const Timeline = () => {
         </div>
         <p class="text-gray-300 italic">Long nghĩ: "Có lẽ đây là cơ hội tốt để học hỏi và phát triển..."</p>
       `,
-      imagePlaceholder: "/src/asset/Gemini_Generated_Image_dn498ydn498ydn49.png",
+  imagePlaceholder: img_dn498,
       icon: "🚀",
       color: "surplus",
       status: "Bị lừa dối",
@@ -88,7 +95,7 @@ const Timeline = () => {
           <p class="text-sm text-labor font-bold">💡 Kết quả: Long tạo ra giá trị gấp 3 lần mức lương nhưng vẫn nhận 8 triệu/tháng</p>
         </div>
       `,
-      imagePlaceholder: "/src/asset/unnamed.jpg",
+  imagePlaceholder: img_unnamed,
       icon: "📚",
       color: "surplus",
       status: "Bóc lột tinh vi",
@@ -135,7 +142,7 @@ const Timeline = () => {
           <li>• "Phát triển bản thân" chỉ làm tăng giá trị cho công ty</li>
         </ul>
       `,
-      imagePlaceholder: "/src/asset/Gemini_Generated_Image_sfp8v1sfp8v1sfp8.png",
+  imagePlaceholder: img_sfp8,
       icon: "💡",
       color: "labor",
       status: "Tỉnh ngộ",
@@ -182,7 +189,7 @@ const Timeline = () => {
           <li>• Không bị bóc lột dưới danh nghĩa "phát triển"</li>
         </ul>
       `,
-      imagePlaceholder: "/src/asset/Gemini_Generated_Image_64xlwn64xlwn64xl.png",
+  imagePlaceholder: img_64xl,
       icon: "⚡",
       color: "surplus",
       status: "Hành động",
