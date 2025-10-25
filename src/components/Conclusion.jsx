@@ -42,7 +42,7 @@ const Conclusion = () => {
           className="mb-16"
         >
           <h2 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight">
-            <span className="text-gradient from-labor via-white to-surplus">
+            <span className="text-white drop-shadow-lg">
               Câu Hỏi Cuối Cùng
             </span>
           </h2>
