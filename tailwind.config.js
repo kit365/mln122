@@ -7,21 +7,50 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Background colors
+        background: {
+          dark: '#1E1E1E',      // Xám than chính
+          gray: '#2A2A2A',       // Xám than phụ
+          light: '#3A3A3A',      // Xám than nhạt
+        },
+        // Text colors
+        text: {
+          primary: '#FFFFFF',     // Trắng cho tiêu đề
+          secondary: '#CCCCCC',   // Xám sáng cho nội dung
+          accent: '#A0A0A0',      // Xám bạc cho khung viền
+        },
+        // Concept colors
+        marx: {
+          light: '#FF6B6B',       // Đỏ nhạt cho từ khóa Marx
+          DEFAULT: '#D62828',     // Đỏ chính cho khái niệm Marx
+          dark: '#B71C1C',        // Đỏ đậm
+        },
+        tech: {
+          light: '#4FC3F7',       // Xanh nhạt cho công nghệ
+          DEFAULT: '#007ACC',     // Xanh chính cho công nghệ/phát triển
+          dark: '#0056B3',        // Xanh đậm
+        },
+        // Legacy colors (keeping for compatibility)
         capital: {
-          dark: '#0f0f0f',
-          gray: '#2a2a2a',
-          light: '#4a4a4a',
+          dark: '#1E1E1E',
+          gray: '#2A2A2A',
+          light: '#3A3A3A',
         },
         labor: {
-          light: '#4dd0e1',
-          DEFAULT: '#00acc1',
-          dark: '#00838f',
+          light: '#4FC3F7',
+          DEFAULT: '#007ACC',
+          dark: '#0056B3',
         },
         surplus: {
-          light: '#ef5350',
-          DEFAULT: '#e53935',
-          dark: '#c62828',
+          light: '#FF6B6B',
+          DEFAULT: '#D62828',
+          dark: '#B71C1C',
         }
+      },
+      fontFamily: {
+        'title': ['Bebas Neue', 'Montserrat', 'sans-serif'],
+        'heading': ['Montserrat', 'sans-serif'],
+        'body': ['Lato', 'Open Sans', 'Roboto', 'sans-serif'],
       },
       animation: {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',

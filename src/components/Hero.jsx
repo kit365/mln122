@@ -10,12 +10,15 @@ const Hero = () => {
   const [isGameOpen, setIsGameOpen] = useState(false);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-philosophy">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-capital-dark via-capital-gray to-surplus-dark opacity-80"></div>
-        <div className="absolute top-20 left-10 w-72 h-72 bg-labor/20 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-surplus/20 rounded-full blur-3xl animate-pulse-slow delay-1000"></div>
+        <div className="absolute inset-0 philosophy-gradient opacity-90"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-tech/20 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-marx/20 rounded-full blur-3xl animate-pulse-slow delay-1000"></div>
+        {/* Subtle light streaks for philosophical depth */}
+        <div className="absolute top-1/4 left-1/4 w-1 h-32 bg-tech/30 rotate-12 animate-pulse-slow"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-1 h-24 bg-marx/30 -rotate-12 animate-pulse-slow delay-500"></div>
       </div>
 
       {/* Content */}
@@ -25,14 +28,14 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight">
-            <span className="text-gradient from-labor-light via-white to-surplus">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-title mb-6 leading-tight text-shadow">
+            <span className="text-gradient from-tech-light via-text-primary to-marx">
               "Con Người Là Trung Tâm"
             </span>
             <br />
-            <span className="text-white">Hay</span>
+            <span className="text-text-primary">Hay</span>
             <br />
-            <span className="text-gradient from-surplus via-white to-labor">
+            <span className="text-gradient from-marx via-text-primary to-tech">
               "Tư Bản Là Trung Tâm"?
             </span>
           </h1>
@@ -42,10 +45,10 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-          className="text-lg md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
+          className="text-lg md:text-2xl text-text-secondary mb-12 max-w-4xl mx-auto leading-relaxed font-body"
         >
-          Nhận diện bản chất <span className="text-surplus font-bold">bóc lột tinh vi</span> trong doanh nghiệp hiện đại
-          <br />qua lăng kính <span className="text-labor font-bold">Giá trị thặng dư</span>
+          Nhận diện bản chất <span className="marx-text">bóc lột tinh vi</span> trong doanh nghiệp hiện đại
+          <br />qua lăng kính <span className="tech-text">Giá trị thặng dư</span>
         </motion.p>
 
         <motion.button
@@ -55,7 +58,7 @@ const Hero = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={scrollToContent}
-          className="px-10 py-5 bg-gradient-to-r from-labor to-surplus text-white text-lg font-bold rounded-full shadow-2xl hover:shadow-surplus/50 transition-all duration-300"
+          className="px-10 py-5 contrast-gradient text-text-primary text-lg font-bold rounded-full shadow-2xl hover:shadow-marx/50 transition-all duration-300 border border-text-accent/30"
         >
           Khám Phá Sự Thật
         </motion.button>
@@ -83,9 +86,9 @@ const Hero = () => {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-labor rounded-full flex items-start justify-center p-2"
+            className="w-6 h-10 border-2 border-tech rounded-full flex items-start justify-center p-2"
           >
-            <motion.div className="w-1.5 h-1.5 bg-labor rounded-full"></motion.div>
+            <motion.div className="w-1.5 h-1.5 bg-tech rounded-full"></motion.div>
           </motion.div>
         </motion.div>
       </div>

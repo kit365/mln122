@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700;800;900&family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,14 +11,33 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #0f0f0f;
-  color: #ffffff;
+  font-family: 'Lato', 'Open Sans', 'Roboto', sans-serif;
+  background-color: #1E1E1E;
+  color: #CCCCCC;
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Bebas Neue', 'Montserrat', sans-serif;
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 1.3;
 }
 
 html {
@@ -29,7 +50,41 @@ html {
   }
   
   .glass-effect {
-    @apply bg-white/5 backdrop-blur-md border border-white/10;
+    @apply bg-white/5 backdrop-blur-md border border-text-accent/20;
+  }
+
+  .marx-text {
+    color: #D62828;
+    font-weight: 600;
+  }
+
+  .tech-text {
+    color: #007ACC;
+    font-weight: 600;
+  }
+
+  .philosophy-gradient {
+    background: linear-gradient(135deg, #1E1E1E 0%, #2A2A2A 50%, #007ACC 100%);
+  }
+
+  .contrast-gradient {
+    background: linear-gradient(135deg, #D62828 0%, #007ACC 100%);
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .border-philosophy {
+    border-color: #A0A0A0;
+  }
+
+  .bg-philosophy {
+    background-color: #1E1E1E;
+  }
+
+  .bg-philosophy-light {
+    background-color: #2A2A2A;
   }
 }
 
